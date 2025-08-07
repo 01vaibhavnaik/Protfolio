@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const animatedElements = document.querySelectorAll('.animate-on-scroll');
@@ -43,6 +44,50 @@
         });
     </script>
     <style>
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2px solid black;
+            vertical-align: text-bottom;
+            line-height: 1.4;
+            animation: typing 7s steps(13, end) infinite, blink 0.7s step-end infinite;
+        }
+
+        @keyframes typing {
+            0% {
+                width: 0
+            }
+
+            35% {
+                width: 18ch
+            }
+
+            /* Typing happens here (~2.5s of 7s) */
+            80% {
+                width: 18ch
+            }
+
+            /* Hold the text for ~3.15s */
+            100% {
+                width: 0
+            }
+
+            /* Clear in final ~1.4s */
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                border-color: black;
+            }
+
+            50% {
+                border-color: transparent;
+            }
+        }
+
         @keyframes fadeZoomOut {
             0% {
                 opacity: 0;
@@ -141,7 +186,7 @@
         ::placeholder {
             color: white !important;
             opacity: 1;
-            
+
         }
     </style>
 </head>
@@ -151,80 +196,61 @@
 
     <nav class="navbar navbar-expand-lg fixed-top bg-dark bg-opacity-75 navshaw">
         <div class="container-fluid">
-            <a class="navbar-brand fw-bold text-warning py-1 ms-4 sofia" href="#">VAIBHAV</a>
+            <a class="navbar-brand fw-bold text-warning py-1 ms-2 sofia" href="#">VAIBHAV</a>
             <button class="navbar-toggler text-bg-secondary" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+                data-bs-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <ul class="navbar-nav ms-auto gap-3">
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold  py-1 text-warning" href="#home">Home</a>
+                <ul class="navbar-nav ms-auto gap-2 pe-2">
+                    <li class="nav-item"><a class="nav-link fw-bold text-warning" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-body-secondary" href="#profile">About</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-warning" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-body-secondary" href="#project">Project</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold py-1 text-body-secondary" href="#profile">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold  py-1 text-warning" href="#resume">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold  py-1 text-body-secondary" href="#project">Project</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold  py-1 text-warning" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link fw-bold text-warning" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
 
-    <section id="home" class="container  min-vh-100 d-flex align-items-center justify-content-center pt-5">
-        <div class="row w-100">
-            <div class="col-md-6 d-flex flex-column align-items-center justify-content-center animate-on-scroll "
+    <section id="home" class="container-fluid min-vh-100 d-flex align-items-center justify-content-center pt-5">
+        <div class="row w-100 g-4">
+            <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center animate-on-scroll"
                 data-animate="animate__fadeInLeft">
-                <img src="/Protfolio/vaibhav.PNG" class="img-fluid rounded-5 shadow mt-4"
-                    style="height: 20rem; width: 25rem; object-fit: cover;" />
-                <a href="Vaibhav-Naik-StandardResume.pdf"  class="btn btn-outline-light social-icon fw-bold  mt-4">
-                    <i class="bi bi-download me-2 "></i> Download CV
+                <img src="/Protfolio/vaibhav.PNG" class="img-fluid rounded-5 shadow mt-4" style=" max-height: 20rem;">
+                <a href="Vaibhav-Naik-StandardResume.pdf" class="btn btn-outline-light social-icon fw-bold mt-4">
+                    <i class="bi bi-download me-2"></i>Download CV
                 </a>
             </div>
-            <div class="col-md-6 d-flex flex-column justify-content-center animate-on-scroll "
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center animate-on-scroll"
                 data-animate="animate__fadeInRight">
                 <h5 class="text-light">Hello, I'm</h5>
-                <h1 class="fw-bold  text-warning">Vaibhav Naik</h1>
-                <h5 class="text-light">A Full Stack Developer</h5>
-                <p class="mt-2 text-light">
-                    I specialize in building modern, responsive web applications from front to back. Let's connect and
-                    create something great together!
-                </p>
+                <h1 class="fw-bold text-warning">Vaibhav Naik</h1>
+                <h5 class="text-light typewriter">Full Stack Developer</h5>
+                <p class="mt-2 text-light">I specialize in building modern, responsive web applications...</p>
                 <div class="mt-3 d-flex gap-4">
-                    <a href="https://github.com/01vaibhavnaik" target="_blank" class="text-white fs-4">
-                        <i class="bi bi-github social-icon"></i>
-                    </a>
+                    <a href="https://github.com/01vaibhavnaik" target="_blank" class="text-white fs-4"><i
+                            class="bi bi-github social-icon"></i></a>
                     <a href="https://www.linkedin.com/in/vaibhav-naik-953928261/" target="_blank"
-                        class="text-white fs-4">
-                        <i class="bi bi-linkedin social-icon"></i>
-                    </a>
-                    <a href="mailto:vaibhavnaik32275@gmail.com" class="text-white fs-4">
-                        <i class="bi bi-envelope-fill social-icon"></i>
-                    </a>
+                        class="text-white fs-4"><i class="bi bi-linkedin social-icon"></i></a>
+                    <a href="mailto:vaibhavnaik32275@gmail.com" class="text-white fs-4"><i
+                            class="bi bi-envelope-fill social-icon"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
+
     <section id="profile"
-        class="container min-vh-100 d-flex flex-column justify-content-center align-items-center conshaw p-5">
+        class="container min-vh-100 d-flex flex-column justify-content-center align-items-center conshaw p-3">
         <div class="card bg-transparent border border-warning shadow-lg p-4 w-100 animate-on-scroll"
-            data-animate="animate__fadeInUp" style="max-width: 100%;">
-            <h3 class=" fw-bold sofia mt-4 mb-2  text-warning animate-on-scroll" data-animate="animate__fadeInLeft">
-                ABOUT ME
-            </h3>
-            <hr class="border-warning opacity-100 mb-4 animate-on-scroll" data-animate="animate__fadeInLeft"
-                style="width: 520px;">
+            data-animate="animate__fadeInUp">
+            <h3 class="fw-bold sofia text-warning animate-on-scroll" data-animate="animate__fadeInLeft">
+                ABOUT ME</h3>
+            <hr class="border-warning opacity-100 mb-4  animate-on-scroll" data-animate="animate__fadeInLeft"
+                style="max-width: 300px;">
 
             <p class="text-light mt-5 animate-on-scroll" data-animate="animate__fadeInUp">
                 Hi, I'm <strong>Vaibhav Naik</strong>, an aspiring software developer currently interning at
@@ -254,337 +280,295 @@
                 problem-solving skills.
             </p>
 
-            <ul class="list-unstyled text-light mt-4 animate-on-scroll" data-animate="animate__fadeInUp">
-                <li>
-                    <strong><i class="bi bi-envelope-fill me-2"></i>Email:</strong>
-                    <a href="mailto:vaibhavnaik32275@gmail.com"
-                        class="text-decoration-none text-light">vaibhavnaik32275@gmail.com</a>
-                </li>
-                <li>
-                    <strong><i class="bi bi-telephone-fill me-2"></i>Phone:</strong>
-                    <a href="tel:+918329694138" class="text-decoration-none text-light">+91 83296 94138</a>
-                </li>
+            <ul class="list-unstyled text-light mt-3 animate-on-scroll " data-animate="animate__fadeInUp">
+                <li><strong><i class="bi bi-envelope-fill me-2"></i>Email:</strong> <a
+                        href="mailto:vaibhavnaik32275@gmail.com"
+                        class="text-decoration-none text-light">vaibhavnaik32275@gmail.com</a></li>
+                <li><strong><i class="bi bi-telephone-fill me-2"></i>Phone:</strong> <a href="tel:+918329694138"
+                        class="text-decoration-none text-light">+91 83296 94138</a></li>
                 <li><strong><i class="bi bi-geo-alt-fill me-2"></i>Location:</strong> Goa, India</li>
             </ul>
         </div>
     </section>
 
-
-    <section id="resume" class="container min-vh-100 d-flex flex-column  conshaw p-5">
-        <h3 class="fw-bold sofia mt-4 mb-2  text-warning animate-on-scroll ms-4" data-animate="animate__fadeInLeft">
-            EDUCATION
-        </h3>
-        <hr class="border-warning opacity-100 mb-4 ms-4 animate-on-scroll" data-animate="animate__fadeInLeft"
-            style="width: 520px;">
-        <h4 class="ms-4 animate-on-scroll" data-animate="animate__fadeInUp">Shree Devi Institute of Technology,
+    <section id="resume" class="container min-vh-100 d-flex flex-column conshaw p-3">
+        <h3 class="fw-bold sofia text-warning mt-5 animate-on-scroll" data-animate="animate__fadeInLeft">
+            EDUCATION</h3>
+        <hr class="border-warning opacity-100 mb-2 mx-auto animate-on-scroll" data-animate="animate__fadeInLeft"
+            style="max-width: 300px;">
+        <h4 class="animate-on-scroll" data-animate="animate__fadeInUp">Shree Devi Institute of Technology,
             Mangalore (2025)</h4>
-        <h3 class="ms-4 animate-on-scroll" data-animate="animate__fadeInUp">CGPA: 8.2</h3>
+        <h5 class=" animate-on-scroll" data-animate="animate__fadeInUp">CGPA: 8.2</h5>
 
-        <div class="row g-1 mt-3">
-            <div class="col-8 animate-on-scroll mx-auto" data-animate="animate__fadeInUp">
-                <h2 class=" animate-on-scroll text-warning text-center fw-bold sofia" data-animate="animate__fadeInUp">
-                    Technical Skills
-                </h2>
-                <div class="d-flex flex-column align-items-center mt-5">
-                    <div class="card bg-transparent border border-warning shadow-lg p-5 ">
+        <div class="row g-4 mt-4 justify-content-center">
+            <div class="col-12 col-lg-10 animate-on-scroll" data-animate="animate__fadeInUp">
+                <h2 class="text-warning text-center fw-bold sofia">Technical Skills</h2>
+                <div class="card bg-transparent border border-warning shadow-lg p-4 mt-4">
+                    <div class="row text-center">
 
-                        <div class="row text-center">
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInRight">
-                                <div class="tech-container">
-                                    <img src="/Protfolio/java.png" class="tech-icon" style="width: 45px; height: 45px;">
-                                    <div class="tech-label">Java</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInRight">
-                                <div class="tech-container">
-                                    <img src="/Protfolio/html.png" class="tech-icon" style="width: 45px; height: 45px;">
-                                    <div class="tech-label">HTML</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInLeft">
-                                <div class="tech-container">
-                                    <img src="/Protfolio/css.png" class="tech-icon" style="width: 45px; height: 45px;">
-                                    <div class="tech-label">CSS</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInLeft">
-                                <div class="tech-container ">
-                                    <img src="/Protfolio/mySql.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">My SQL</div>
-                                </div>
-                            </div>
-
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInRight">
-                                <div class="tech-container mt-5">
-                                    <img src="/Protfolio/js.png" class="tech-icon" style="width: 45px; height: 45px;">
-                                    <div class="tech-label">JavaScript</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInRight">
-                                <div class="tech-container mt-5 ">
-                                    <img src="/Protfolio/spring.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">Spring Framework</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInLeft">
-                                <div class="tech-container mt-5">
-                                    <img src="/Protfolio/lombok.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">Lombok</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInLeft">
-                                <div class="tech-container mt-5">
-                                    <img src="/Protfolio/servlet.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">Servlet</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInRight">
-                                <div class="tech-container mt-5">
-                                    <img src="/Protfolio/jdbc.png" class="tech-icon" style="width: 45px; height: 45px;">
-                                    <div class="tech-label">JDBC</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInRight">
-                                <div class="tech-container mt-5">
-                                    <img src="/Protfolio/maven.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">MAVEN</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInLeft">
-                                <div class="tech-container mt-5">
-                                    <img src="/Protfolio/jpa.png" class="tech-icon" style="width: 50px; height: 50px;">
-                                    <div class="tech-label">JPA</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInLeft">
-                                <div class="tech-container mt-5 ">
-                                    <img src="/Protfolio/bootstrap.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">BootStrap</div>
-                                </div>
-                            </div>
-                            <div class="col-12 animate-on-scroll" data-animate="animate__fadeInUp">
-                                <div class="tech-container mt-5">
-                                    <img src="/Protfolio/github.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">Git-Hub</div>
-                                </div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/java.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">Java</div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-8 animate-on-scroll mx-auto" data-animate="animate__fadeInUp">
-                <h2 class="mt-5 animate-on-scroll text-warning text-center fw-bold sofia"
-                    data-animate="animate__fadeInUp">
-                    Tools
-                </h2>
-                <div class="d-flex flex-column align-items-center mt-5">
-                    <div class="card bg-transparent border border-warning shadow-lg p-3 w-90 ">
-                        <div class="row text-center">
-                            <div class="col-3 animate-on-scroll pe-3" data-animate="animate__fadeInRight">
-                                <div class="tech-container">
-                                    <img src="/Protfolio/intellij.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">IntelliJ IDEA</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInRight">
-                                <div class="tech-container ">
-                                    <img src="/Protfolio/gitbash.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">Git Bash</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInLeft">
-                                <div class="tech-container ">
-                                    <img src="/Protfolio/vs.png" class="tech-icon" style="width: 50px; height: 50px;">
-                                    <div class="tech-label">VS Code</div>
-                                </div>
-                            </div>
-                            <div class="col-3 animate-on-scroll" data-animate="animate__fadeInLeft">
-                                <div class="tech-container ">
-                                    <img src="/Protfolio/notepad.png" class="tech-icon"
-                                        style="width: 45px; height: 45px;">
-                                    <div class="tech-label">Notepad++</div>
-                                </div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/css.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">CSS</div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-            </div>
-            <hr class="border-light opacity-100 mt-5">
-            <h2 class="mt-1 animate-on-scroll text-warning text-center fw-bold sofia" data-animate="animate__fadeInUp">
-                Work Experience
-            </h2>
-
-            <div class="row g-4">
-                <div class="col-md-4 ">
-                    <div class="card bg-transparent justify-content-center align-items-center text-center  navshaw p-4 animate-on-scroll"
-                        style="height: 230px;" data-animate="animate__fadeInRight">
-                        <h5 class=" text-warning">Software Intern</h5>
-                        <span class="text-warning">X-Workz</span><br>
-                        <span class="fw-bold text-warning">Feb 2025 - Present</span>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card bg-transparent  navshaw p-4 animate-on-scroll" data-animate="animate__fadeZoomOut">
-                        <img src="/Protfolio/person.png" style="width: 310px; height: 180px;">
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="card bg-transparent justify-content-center align-items-center text-center  navshaw p-4 animate-on-scroll"
-                        style="height: 230px;" data-animate="animate__fadeInLeft">
-                        <h5 class=" text-warning">Java Intern</h5>
-                        <span class="text-warning">Accolade Tech Solution</span><br>
-                        <span class="fw-bold text-warning">Oct 2022 - Nov 2022</span>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="border-light opacity-100 mt-5">
-
-    </section>
-    <section id="project" class="container min-vh-100 d-flex flex-column align-items-center conshaw ">
-        <div class="card bg-transparent border border-warning shadow-lg p-4 w-100 animate-on-scroll mt-5 "
-            data-animate="animate__fadeInUp" style="max-width: 100%;">
-            <h1 class="text-warning text-center animate-on-scroll fw-bold sofia" data-animate="animate__fadeInUp">
-                PROJECT</h1>
-
-            <div class="row g-5">
-                <div class="col-md-4">
-                    <div class="card bg-transparent border border-light shadow-lg p-4 animate-on-scroll"
-                        data-animate="animate__fadeInRight">
-                        <div class="tech-container ">
-                            <a href="https://github.com/01vaibhavnaik/X-Workz_Web/blob/main/Task6/YouTube.html"
-                                target="_blank">
-                                <img src="/Protfolio/youtube.png" class="tech-icon"
-                                    style="width: 310px; height: 150px;">
-                            </a>
-                            <div class="tech-label ">YouTube Front-End Page</div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/html.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">HTML</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-transparent border border-light shadow-lg p-4 animate-on-scroll"
-                        data-animate="animate__fadeZoomOut">
-                        <div class="tech-container ">
-                            <a href="https://github.com/01vaibhavnaik/X-Workz_Web/blob/main/Task7/Creator.html"
-                                target="_blank">
-                                <img src="/Protfolio/project1.png" class="tech-icon"
-                                    style="width: 310px; height: 150px;">
-                            </a>
-                            <div class="tech-label ">Front-End LogIn-SignUp Page</div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/mySql.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">MySQL</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-transparent border border-light shadow-lg p-4 animate-on-scroll"
-                        data-animate="animate__fadeInLeft">
-                        <div class="tech-container ">
-                            <img src="/Protfolio/project3.png" class="tech-icon" style="width: 310px; height: 150px;">
-                            <div class="tech-label">Project 1</div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/maven.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">MAVEN</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-transparent border border-light shadow-lg p-4 animate-on-scroll"
-                        data-animate="animate__fadeInRight">
-                        <div class="tech-container ">
-                            <img src="/Protfolio/project4.png" class="tech-icon" style="width: 310px; height: 150px;">
-                            <div class="tech-label">Project 1</div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/bootstrap.png" class="tech-icon img-fluid"
+                                    style="max-height: 45px;">
+                                <div class="tech-label">Bootstarp</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-transparent border border-light shadow-lg p-4 animate-on-scroll"
-                        data-animate="animate__fadeZoomOut">
-                        <div class="tech-container ">
-                            <img src="/Protfolio/person.png" class="tech-icon" style="width: 310px; height: 150px;">
-                            <div class="tech-label">Project 1</div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/lombok.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">Lombok</div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card bg-transparent border border-light shadow-lg p-4 animate-on-scroll"
-                        data-animate="animate__fadeInLeft">
-                        <div class="tech-container ">
-                            <a href="https://github.com/01vaibhavnaik/Ice_cream-shop" target="_blank">
-                                <img src="/Protfolio/project.png" class="tech-icon"
-                                    style="width: 310px; height: 150px;">
-                            </a>
-                            <div class="tech-label">Ice_Cream-Shop</div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/js.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">JavScript</div>
+                            </div>
                         </div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/jpa.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">JPA</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/servlet.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">Servlet</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/spring.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">Spring</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-2 mb-4 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/jdbc.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">JDBC</div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="row mt-5 justify-content-center">
+            <div class="col-12 col-lg-8 animate-on-scroll" data-animate="animate__fadeInUp">
+                <h2 class="text-warning text-center fw-bold sofia">Tools</h2>
+                <div class="card bg-transparent border border-warning shadow-lg p-4 mt-2">
+                    <div class="row text-center">
+                        <div class="col-4 col-sm-3 col-md-3 mb-2 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/intellij.png" class="tech-icon img-fluid"
+                                    style="max-height: 45px;">
+                                <div class="tech-label">IntelliJ IDEA</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-3 mb-2 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/gitbash.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">Git-Bash</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-3 mb-2 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/vs.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">VS</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-sm-3 col-md-3 mb-2 animate-on-scroll" data-animate="animate__fadeInUp">
+                            <div class="tech-container">
+                                <img src="/Protfolio/notepad.png" class="tech-icon img-fluid" style="max-height: 45px;">
+                                <div class="tech-label">Notepad++</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="border-light opacity-100 my-5">
+        <h2 class="text-warning text-center fw-bold sofia animate-on-scroll" data-animate="animate__fadeInUp">Work
+            Experience</h2>
+        <div class="row g-4 mt-4">
+            <div class="col-md-6 col-lg-4 animate-on-scroll" data-animate="animate__fadeInRight">
+                <div class="card bg-transparent navshaw text-center p-4 h-100">
+                    <h5 class="text-warning">Software Intern</h5>
+                    <span class="text-warning">X-Workz</span><br>
+                    <span class="fw-bold text-warning">Feb 2025 - Present</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll" data-animate="animate__fadeZoomOut">
+                <div class="card bg-transparent navshaw text-center p-3 h-100">
+                    <img src="/Protfolio/person.png" class="img-fluid" style="max-height: 180px;">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-on-scroll" data-animate="animate__fadeInLeft">
+                <div class="card bg-transparent navshaw text-center p-4 h-100">
+                    <h5 class="text-warning">Java Intern</h5>
+                    <span class="text-warning">Accolade Tech Solution</span><br>
+                    <span class="fw-bold text-warning">Oct 2022 - Nov 2022</span>
+                </div>
+            </div>
+        </div>
+        <hr class="border-light opacity-100 my-5">
     </section>
-    <section id="contact" class="container min-vh-100 d-flex flex-column conshaw pt-5 ">
-        <div class="d-flex flex-column justify-content-center align-items-center animate-on-scroll"
+
+
+
+    <section id="project" class="container min-vh-100 d-flex flex-column align-items-center conshaw pt-5">
+        <div class="card bg-transparent border border-warning shadow-lg p-4 w-100 animate-on-scroll mt-4"
+            data-animate="animate__fadeInUp">
+            <h1 class="text-warning text-center fw-bold sofia">PROJECTS</h1>
+            <div class="row g-4 mt-3">
+
+                <div class="col-12 col-sm-6 col-lg-4 animate-on-scroll" data-animate="animate__fadeInRight">
+                    <div class="card bg-transparent border tech-container border-light shadow-lg p-3">
+                        <a href="https://github.com/01vaibhavnaik/X-Workz_Web/blob/main/Task6/YouTube.html"
+                            target="_blank">
+                            <img src="/Protfolio/youtube.png" class="tech-icon img-fluid w-100"
+                                style="max-height: 380px; object-fit: cover;">
+                        </a>
+                        <div class="tech-label">YouTube Front-End Page</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 animate-on-scroll" data-animate="animate__fadeInRight">
+                    <div class="card bg-transparent border tech-container border-light shadow-lg p-3">
+                        <a href="https://github.com/01vaibhavnaik/X-Workz_Web/blob/main/Task6/YouTube.html"
+                            target="_blank">
+                            <img src="/Protfolio/project.png" class="tech-icon img-fluid w-100"
+                                style="max-height: 380px; object-fit: cover;">
+                        </a>
+                        <div class="tech-label">YouTube Front-End Page</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 animate-on-scroll" data-animate="animate__fadeInRight">
+                    <div class="card bg-transparent border tech-container border-light shadow-lg p-3">
+                        <a href="https://github.com/01vaibhavnaik/X-Workz_Web/blob/main/Task7/Creator.html"
+                            target="_blank">
+                            <img src="/Protfolio/project3.png" class="tech-icon img-fluid w-100"
+                                style="max-height: 380px; object-fit: cover;">
+                        </a>
+                        <div class="tech-label">Front-End LogIn-SignUp Page</div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4 animate-on-scroll" data-animate="animate__fadeInRight">
+                    <div class="card bg-transparent border tech-container border-light shadow-lg p-3">
+                        <a href="https://github.com/01vaibhavnaik/X-Workz_Web/blob/main/Task7/Creator.html"
+                            target="_blank">
+                            <img src="/Protfolio/project1.png" class="tech-icon img-fluid w-100"
+                                style="max-height: 380px; object-fit: cover;">
+                        </a>
+                        <div class="tech-label">Front-End LogIn-SignUp Page</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 animate-on-scroll" data-animate="animate__fadeInRight">
+                    <div class="card bg-transparent border tech-container border-light shadow-lg p-3">
+                        <a href="https://github.com/01vaibhavnaik/X-Workz_Web/blob/main/Task7/Creator.html"
+                            target="_blank">
+                            <img src="/Protfolio/project2.png" class="tech-icon img-fluid w-100"
+                                style="max-height: 380px; object-fit: cover;">
+                        </a>
+                        <div class="tech-label">Front-End LogIn-SignUp Page</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 animate-on-scroll" data-animate="animate__fadeInRight">
+                    <div class="card bg-transparent border tech-container border-light shadow-lg p-3">
+                        <a href="https://github.com/01vaibhavnaik/Ice_cream-shop" target="_blank">
+                            <img src="/Protfolio/project4.png" class="tech-icon img-fluid w-100"
+                                style="max-height: 380px; object-fit: cover;">
+                        </a>
+                        <div class="tech-label">Ice_Cream-Shop</div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="container min-vh-100 d-flex flex-column conshaw pt-5">
+        <div class="d-flex flex-column animate-on-scroll align-items-center justify-content-center mt-4"
             data-animate="animate__fadeInUp">
             <h2 class="text-warning sofia">CONTACT ME</h2>
-            <form class="mx-auto w-50 " id="vaibhav_0113">
+            <form class="w-100 px-3 px-md-5" id="vaibhav_0113">
                 <div class="mb-3 animate-on-scroll" data-animate="animate__fadeInUp">
-                    <label for="name" class="form-label  animate-on-scroll">Your Name</label>
-                    <input type="text" class="form-control  border-warning border-2 opacity-50 "
-                        id="name" name="name" placeholder="Enter your name">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input type="text" class="form-control border-warning border-2 opacity-50" id="name" name="name"
+                        placeholder="Enter your name">
                 </div>
                 <div class="mb-3 animate-on-scroll" data-animate="animate__fadeInUp">
                     <label for="email" class="form-label">Your Email</label>
-                    <input type="email" class="form-control   border-warning border-2 opacity-50"
-                        name="email" id="email" placeholder="Enter your email">
+                    <input type="email" class="form-control border-warning border-2 opacity-50" id="email" name="email"
+                        placeholder="Enter your email">
                 </div>
                 <div class="mb-3 animate-on-scroll" data-animate="animate__fadeInUp">
                     <label for="message" class="form-label">Your Message</label>
-                    <textarea class="form-control  border-warning border-2 opacity-50" name="comment"
-                        id="message" rows="4" placeholder="Type your message here"></textarea>
+                    <textarea class="form-control border-warning border-2 opacity-50" id="message" name="comment"
+                        rows="4" placeholder="Type your message here"></textarea>
                 </div>
                 <div class="d-grid animate-on-scroll" data-animate="animate__fadeInUp">
-                    <button type="submit" class="btn btn-warning bg- bg-gradient">
-                        <i class="bi bi-send me-2"></i>Send Message
-                    </button>
+                    <button type="submit" class="btn btn-warning"><i class="bi bi-send me-2"></i>Send Message</button>
                 </div>
             </form>
         </div>
     </section>
 
-
-
-
-
-
-
+    <!-- EmailJS Script -->
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        // Initialize with your EmailJS user ID (public key)
+    <script>
         (function () {
-            emailjs.init("tkh9iWM308X9BrY7w"); // Get it from EmailJS dashboard
+            emailjs.init("tkh9iWM308X9BrY7w");
         })();
 
-        // Handle form submission
         window.onload = function () {
             document.getElementById("vaibhav_0113").addEventListener("submit", function (event) {
                 event.preventDefault();
-
                 emailjs.sendForm("vaibhav_0113", "vaibhav_1301", this).then(
                     function () {
                         alert("✅ Thank you! Your message has been sent.");
-                        document.getElementById("vaibhav_0113").reset(); // clear form
+                        document.getElementById("vaibhav_0113").reset();
                     },
                     function (error) {
                         alert("❌ Oops... Failed to send message.\n" + JSON.stringify(error));
                     }
                 );
-                 emailjs.sendForm("vaibhav_0113", "vaibhav_011304", this)
             });
         };
     </script>
